@@ -35,6 +35,7 @@
 
 .form-online {
   max-width: 266px;
+  margin-bottom: 40px;
   &__label {
     font-size: 11px;
     line-height: 1.18;
@@ -140,8 +141,55 @@
   color: #ffffff;
 }
 .question-img-form {
+  position: relative;
   width: 282px;
   height: 231px;
   background: url("../image/pen-trap.png") left bottom, url("../image/pen.png");
   background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 4px;
+}
+.img-form-modal {
+  position: absolute;
+  top: 78px;
+  left: 25px;
+  width: 231px;
+  height: 134px;
+  padding: 13px;
+  background-color: white;
+  border-radius: 7px;
+  &__title {
+    width: 164px;
+    margin-bottom: 10px;
+    font-family: $ff-trojan;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    text-transform: uppercase;
+    color: rgba(101, 196, 102, 0.7);
+  }
+  &__text {
+    width: 164px;
+    margin-bottom: 8px;
+    font-size: 11px;
+    line-height: 1.18;
+
+    color: #414141;
+  }
+}
+.img-form-modal-btn {
+  display: block;
+  padding: 6px 44px;
+  margin: 0 auto;
+  border: none;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.2;
+  /* identical to box height */
+
+  text-align: center;
+  color: #ffffff;
+  background: #65c466;
+  box-shadow: 0px 2.90241px 21.7681px rgba(0, 0, 0, 0.25);
+  border-radius: 3.62802px;
 }
