@@ -742,7 +742,7 @@ img {
   height: 329px;
   margin-top: -42px;
   margin-bottom: 20px;
-  background-image: url(../image/themis.png), url(../image/themis-shadow.png);
+  background-image: url("../image/themis.png"), url("../image/themis-shadow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -879,7 +879,7 @@ img {
 .question-img-form {
   width: 282px;
   height: 231px;
-  background: url(../image/pen-trap.png) left bottom, url(../image/pen.png);
+  background: url("../image/pen-trap.png") left bottom, url("../image/pen.png");
   background-repeat: no-repeat;
 }
 /*# sourceMappingURL=main.css.map */
