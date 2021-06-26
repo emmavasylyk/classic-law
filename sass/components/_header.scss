@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 7px;
+  padding: 17px 17px 17px 14px;
   border-radius: 5px;
   background-color: $color-green;
 }
@@ -17,63 +17,182 @@
   line-height: 1.22;
 
   color: $color-white;
+  // z-index: 5;
 }
-
 .menu-btn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  display: inline-flex;
+  padding: 10px 6px;
+  border: none;
+  background: #65c466;
+  border-radius: 50px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  background-color: transparent;
+  &__icon {
+    fill: $color-white;
+  }
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #65c466;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   z-index: 1;
+  &__title {
+    margin-top: 31px;
+    font-family: $ff-gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $color-white;
+  }
+  &__label {
+    // outline: 2px solid black;
+    position: absolute;
+    top: 80px;
+    left: 28px;
+    margin-bottom: 22px;
+    background: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    border: none;
+  }
+  &__input {
+    position: relative;
+    width: 269px;
+    height: 35px;
+    padding-left: 11px;
+    background: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    border: none;
+  }
+  &__call-bnt {
+    display: block;
+    border: none;
+    padding: 16px 70px 14px 71px;
+    margin-bottom: 42px;
+    // margin-left: 28px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-green;
+    background-color: $color-white;
+    border: 2px solid $color-white;
+    border-radius: 5px;
+  }
+  &__icon {
+    fill: $color-green;
+  }
 }
-
-.menu-btn > span {
+.menu-container {
+  padding-left: 28px;
+}
+.search-btn {
   position: absolute;
-  display: block;
-  width: 24px;
-  border: 1px solid $color-white;
-  background-color: $color-white;
-}
-
-.menu-btn > span::before,
-.menu-btn > span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: -7px;
-  left: -1px;
-  width: 24px;
-  border: 1px solid $color-white;
-  background-color: $color-white;
-}
-
-.menu-btn > span::after {
-  top: 5px;
-}
-
-.checkbox {
-  position: absolute;
-  top: 33%;
-  right: 33%;
-  opacity: 0;
-}
-
-.checkbox:checked ~ .menu-btn > span::before {
-  transform: rotate(0);
   top: 0;
-  opacity: 0;
+  right: 0;
+  height: 35px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 9px 8px 8px 10px;
+  border: none;
+  &__icon {
+    fill: #65c466;
+  }
 }
 
-.checkbox:checked ~ .menu-btn > span::after {
-  transform: rotate(90deg);
-  top: 0;
+.menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.menu-btn__close {
+  position: absolute;
+  top: 24px;
+  right: 23px;
+  height: 36px;
+  padding: 9px;
+  background: #65c466;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  border: none;
+  // background-color: transparent;
 }
 
-.checkbox:checked ~ .menu-btn > span {
-  transform: rotate(45deg);
+.is-hidden {
+  display: none;
+}
+.mobile-menu-nav {
+  margin-top: 137px;
+  // margin-left: 28px;
+  margin-bottom: 21px;
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-transform: uppercase;
+
+    color: $color-text-menu;
+  }
+}
+.submenu {
+  margin-left: 10px;
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__link {
+    font-size: 10px;
+    line-height: 1.2;
+    color: $color-text-menu;
+  }
+}
+
+.menu-tel {
+  // margin-left: 28px;
+  color: $color-white;
+  margin-bottom: 19px;
+  &__icon {
+    margin-right: 8px;
+    fill: $color-white;
+  }
+  &__link {
+    margin-bottom: 3px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: inherit;
+  }
+  &__text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+.menu-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__icon {
+    fill: $color-white;
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.24;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
 }
