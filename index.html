@@ -89,9 +89,29 @@
     </header>
     <main>
         <div>
-            <section>
-                <div class="container">
-                    <h2>Задайте вопрос юристу онлайн</h2>
+            <section class="question">
+                <div class="container question-container">
+                    <h2 class="question__title">Задайте вопрос юристу онлайн</h2>
+                    <p class="question__text">Компания специализируется на оказании широкого спектра услуг как для корпоративных клиентов так и для частных лиц.
+                    Профессионализм и ответственность ключевые преимущества нашей компании.</p>
+                <div class="question__img"></div>
+                    <form class="form-online">
+                        <label class="form-online__label">
+                            <input class="form-online__input" type="tel" name="tel" placeholder="Введите номер Вашего телефона" required>
+                        </label>
+                        <label class="form-online__label">
+                            <textarea class="form-online__comment" name="comment" placeholder="Введите Ваш вопрос"></textarea>
+                        </label>
+                        
+                        <div class="form-police">
+                            <label class="form-police-label">
+                                <input type="checkbox" name="police" class="checkbox">
+                                <span class="checkbox__icon"></span>
+                                <span class="checkbox__text">Нажимая кнопку “Отправить” вы соглашаетесь с политикой конфидециальности</span>
+                            </label>
+                            <button class="form-police-btn" type="submit">Отправить вопрос</button>
+                        </div>
+                    </form>
                 </div>
                 
             </section>
